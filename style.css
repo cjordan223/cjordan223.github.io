@@ -1,40 +1,11 @@
-/* Custom styles */
-
-/* Navbar */
-.navbar {
-    background-color: #343a40;
+body {
+    font-family: Arial, sans-serif;
 }
 
-.navbar-brand {
-    font-size: 1.5rem;
+h1 {
+    color: #007bff;
 }
 
-.navbar-nav .nav-link {
-    color: white;
-    font-size: 1.2rem;
-}
-
-/* Hero Section */
-.hero-section {
-    background-image: url('path/to/your/image.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Features Section */
-.feature {
-    padding: 50px 0;
-    background-color: #f8f9fa;
-}
-
-/* Footer */
-.footer {
-    background-color: #343a40;
-    color: white;
-    padding: 20px 0;
+.container {
+    padding-top: 20px;
 }
