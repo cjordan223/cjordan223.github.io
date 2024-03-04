@@ -3,9 +3,114 @@ body {
 }
 
 h1 {
-    color: #007bff;
+    color: #123f07;
 }
 
 .container {
     padding-top: 20px;
 }
+
+footer {
+    padding-top: 20px; /* Adjust top padding */
+    padding-bottom: 20px; /* Adjust bottom padding */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.site-content {
+    flex: 1;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.site-content {
+    flex: 1;
+}
+
+.hero-section {
+    background-color: #1E2022; /* Dark gray */
+    background-image: linear-gradient(120deg, #4a5568 0%, #2d3748 100%);
+    padding: 100px 0; /* Adjust the padding to control the height */
+}
+
+.container h2 {
+    color: #718096; /* Stormy gray */
+    padding-bottom: 20px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #2d3748; /* Darker shade for footer */
+    color: #cbd5e0;
+    padding: 20px 0;
+}
+
+#intro{
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for the text */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.hero-background {
+    background: url('/imgs/pexels-thanh-luu-20344851.jpg') no-repeat center center;
+    background-size: cover; /* Ensure the background covers the entire div */
+    min-height: 100vh; /* Make it at least the height of the viewport */
+    color: white; /* Adjust based on your background image */
+    padding-top: 80px; /* Adjust based on your header's height */
+    padding-bottom: 80px; /* Adjust based on your footer's height */
+}
+
+@font-face {
+    font-family: 'NeueRegradeBold'; /* Choose a name for your font family */
+    src: url('Neue\ Regrade\ Bold.otf') format('opentype');
+    /* Add more src lines for different formats if needed */
+}
+
+@font-face {
+    font-family: 'NeueRegradeMedium'; /* Choose a name for your font family */
+    src: url('Neue\ Regrade\ Medium.otf') format('opentype');
+    /* Add more src lines for different formats if needed */
+}
+
+body {
+    font-family: 'NeueRegradeMedium', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'NeueRegradeBold', sans-serif;
+    /* You can customize this for specific headings */
+}
+
+
+/*
+^^
+Sets the html and body elements to a height of 100%, ensuring they take up the full viewport height.
+Converts the body element into a flex container with a column direction, allowing you to order elements vertically.
+The .site-content class is set to flex with a value of 1, allowing it to expand and take up any available space, pushing the footer to the bottom
+
+*/
