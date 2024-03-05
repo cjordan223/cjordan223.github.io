@@ -9,77 +9,99 @@
 </head>
 <body>
 
-    <div id="header"></div>
-    <div class="site-content">
+<div id="header"></div>
+<div class="site-content">
     <!-- Hero Background Section -->
     <div class="hero-background d-flex align-items-center">
         <div class="container">
-            <div class="row">
-                <div class="col-md-8"> <!-- Adjusts the width and alignment -->
-                    <h1>Welcome to My Portfolio</h1>
-                    <div id="intro">
-                        <p>I decided to build my portfolio website with basic HTML, CSS, Bootstrap, and JavaScript. I had originally built a completely different website with Node.js & Express, but I didn't realize I couldn't host a full stack website on GitHub so...here we are. This is all client-side, but I do have quite a bit of back-end experience I hope is showcased here a bit. Please take a look around and browse through my projects, or learn a little more about me.</p>
+            <div class="row" id="welcome-text">
+                <div class="col-md-8">
+                    <h1>Conner Jordan</h1>
+ 
+    <p>Web Development & Security</p>
+ 
+
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Welcome Section -->
+<div class="welcome-background d-flex align-items-center">
+    <div class="container">
+        <div class="row align-items-center" id="welcome-section">
+            <!-- Text Column -->
+            <div class="col-md-6">
+                <h1>Welcome to My Digital Portfolio</h1>
+                <p>Thanks for taking the time to stop by my website. I've built this site mainly as a place to leave past - and ongoing - projects, as I continue to grow as a developer and designer. Everything you see was built by me from scratch with basic HTML, CSS/Bootstrap, and some JS for interactivity. All the images were created or taken by me.</p>
+            </div>
+            <!-- Image Column -->
+            <div class="col-md-6">
+                <img src="/imgs/pexels-photo-577585.webp" alt="Welcome Image" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>    <!-- Portfolio Section -->
+    <div class="container mt-5">
+        <h2 class="text-center">Featured Projects</h2>
+        <div class="row equal-height-cards align-items-center">
+            <!-- Project 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/imgs/thumb3.jpg" class="card-img-top" alt="Project 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Protect yourself online</h5>
+                        <p class="card-text">Educating yourself is the best insurance you can invest in</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/imgs/thumb2.jpg" class="card-img-top" alt="Project 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Getting Offline</h5>
+                        <p class="card-text">Gathering together some local excursions in SLO and beyond</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/imgs/thumb1.jpg" class="card-img-top" alt="Project 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Design Trends</h5>
+                        <p class="card-text">New Developments in Tech</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Portfolio Section -->
-    <!-- Your portfolio section remains unchanged -->
-
-
-        <!-- Portfolio Section -->
-        <!-- Portfolio Section -->
-<div class="container mt-5">
-    <h2 class="text-center">Featured Projects</h2>
-    <div class="row">
-        <!-- Project 1 -->
-        <div class="col-md-4 mb-4">
-            <div class="card">
-                <img src="/imgs/pexels-pixabay-267350.jpg" class="card-img-top" alt="Project 1">
-                <div class="card-body">
-                    <h5 class="card-title">Protect yourself online</h5>
-                    <p class="card-text"> Educating yourself is the best insurance you can invest in</p>
-                    <a href="#" class="btn btn-primary">Learn More</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="col-md-4 mb-4">
-            <div class="card">
-                <img src="/imgs/pexels-eberhard-grossgasteiger-2098427.jpg" class="card-img-top" alt="Project 2">
-                <div class="card-body">
-                    <h5 class="card-title">Getting Offline</h5>
-                    <p class="card-text">Gathering together some local excursions in SLO and beyond</p>
-                    <a href="#" class="btn btn-primary">Learn More</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="col-md-4 mb-4">
-            <div class="card">
-                <img src="/imgs/pexels-junior-teixeira-2047905.jpg" class="card-img-top" alt="Project 3">
-                <div class="card-body">
-                    <h5 class="card-title">Design Trends</h5>
-                    <p class="card-text">New Developments in Tech</p>
-                    <a href="#" class="btn btn-primary">Learn More</a>
+    <!-- Portfolio Link Section -->
+    <div class="portfolio-link-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <img src="/imgs/pexels-photo-577585.webp" alt="My Portfolio" class="img-fluid mb-3">
+                    <a href="/projects.html" class="btn btn-lg btn-primary">View Full Portfolio</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+<div id="footer"></div>
 
-    <div id="footer"></div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(function(){
-            $("#header").load("header.html");
-            $("#footer").load("footer.html");
-        });
-    </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(function(){
+        $("#header").load("header.html");
+        $("#footer").load("footer.html");
+    });
+</script>
 </body>
 </html>

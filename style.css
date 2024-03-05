@@ -43,6 +43,11 @@ body, html {
     padding: 100px 0; /* Adjust the padding to control the height */
 }
 
+.welcome-background {
+    background-color: #99a6b7;
+    background-size: cover;
+}
+
 .container h2 {
     color: #718096; /* Stormy gray */
     padding-bottom: 20px;
@@ -85,15 +90,17 @@ footer {
     padding-bottom: 80px; /* Adjust based on your footer's height */
 }
 
+
+
 @font-face {
     font-family: 'NeueRegradeBold'; /* Choose a name for your font family */
-    src: url('Neue\ Regrade\ Bold.otf') format('opentype');
+    src: url('/media/Neue\ Regrade\ Bold.otf') format('opentype');
     /* Add more src lines for different formats if needed */
 }
 
 @font-face {
     font-family: 'NeueRegradeMedium'; /* Choose a name for your font family */
-    src: url('Neue\ Regrade\ Medium.otf') format('opentype');
+    src: url('/media/Neue\ Regrade\ Medium.otf') format('opentype');
     /* Add more src lines for different formats if needed */
 }
 
@@ -106,7 +113,29 @@ h1, h2, h3 {
     /* You can customize this for specific headings */
 }
 
+.col-md-4.equal-height-cards {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 
+p {
+
+    color: #123f07;
+}
+
+#welcome-text {
+
+    padding-bottom: 300px;
+}
+
+#welcome-section {
+
+    padding-bottom: 100px;
+    padding-top: 75px;  
+    
+ 
+}
 /*
 ^^
 Sets the html and body elements to a height of 100%, ensuring they take up the full viewport height.
