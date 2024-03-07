@@ -1,0 +1,11 @@
+<!-- Right column for image and dropdown -->
+            <div class="col-md-4">
+                <img src="/imgs/khans.webp" alt="Descriptive Alt Text" class="img-fluid">
+                <h3>Data Structures / Algorithms</h3>
+                <select class="form-control mt-3">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                </select>
+            </div>
+        </div>

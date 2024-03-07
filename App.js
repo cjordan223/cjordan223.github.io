@@ -27,7 +27,7 @@
         { title: 'Card 1', imageUrl: 'https://via.placeholder.com/150', text: 'This is the first card', },
         { title: 'Card 2', imageUrl: 'https://via.placeholder.com/150', text: 'This is the second card', },
         // ... Add 6 more cards
-        { title: 'Card 3', imageUrl: 'https://via.placeholder.com/150', text: 'This is the third card', },
+        { title: 'Card 3', imageUrl: 'https://connerjordan.com/Markov/', text: 'This is the third card', },
         { title: 'Card 4', imageUrl: 'https://via.placeholder.com/150', text: 'This is the fourth card', },
         { title: 'Card 5', imageUrl: 'https://via.placeholder.com/150', text: 'This is the fifth card', },
         { title: 'Card 6', imageUrl: 'https://via.placeholder.com/150', text: 'This is the sixth card', },
