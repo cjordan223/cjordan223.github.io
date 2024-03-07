@@ -1,58 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
 <body>
 
     <div id="header"></div>
 
-
     <div class="container mt-5">
         <h1>Projects</h1>
-        <p>This section can showcase your projects. You might want to include images, descriptions, and links to live demos or GitHub repositories.</p>
-    
-        <!-- Project 1 -->
-        <div class="media mb-4">
-            <img src="/imgs/42df6c74-cc20-41f2-a4e9-2cbfa34fa027.webp" class="align-self-start mr-3" alt="Project 1" style="width: 180px;">
-            <div class="media-body">
-                <h5 class="mt-0">User Database</h5>
-                <p>Short description of Project 1. This can include technologies used, the purpose of the project, and any challenges you faced during development.</p>
-                <a href="#" class="btn btn-primary">Learn More</a>
+        <p>You'll find a mixed bag here, I love working with different frameworks and languages to get a feel for each.</p>
+        
+        <!-- Start of Projects and Image/Dropdown section -->
+        <div class="row">
+            <!-- Left column for cards -->
+            <div class="col-md-8">
+         
+          
+            </div>
+            
+            <!-- Right column for image and dropdown -->
+            <div class="col-md-4">
+                <img src="/imgs/khans.webp" alt="Descriptive Alt Text" class="img-fluid">
+                <h3>Data Structures / Algorithms</h3>
+                <select class="form-control mt-3">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                </select>
             </div>
         </div>
-    
-        <!-- Project 2 -->
-        <div class="media mb-4">
-            <img src="/imgs/khans.webp" class="align-self-start mr-3" alt="Project 2" style="width: 180px;">
-            <div class="media-body">
-                <h5 class="mt-0">Khan's Sorting Algorithm</h5>
-                <p>Short description of Project 2. This can include technologies used, the purpose of the project, and any challenges you faced during development.</p>
-                <a href="#" class="btn btn-primary">Learn More</a>
+        <!-- End of Projects and Image/Dropdown section -->
+
+        <h1 class="mt-5">Completed Web Sites</h1>
+        <p>Most of this work was done in 2022-2023, when I was working as a freelancer for Simple.biz.</p>
+        <h4>Tools used:</h4>
+        <ul>
+            <li>Duda CMS</li>
+            <li>Canva Pro</li>
+            <li>Photoshop</li>
+            <li>Cognito Forms</li>
+        </ul>
+
+        <h4>Click an Image to Visit the Site</h4>
+        <div class="row mb-4">
+            <!-- First row of images -->
+            <!-- Image 1 -->
+            <div class="col-md-4">
+                <a href="https://example.com/1" target="_blank">
+                    <img src="/imgs/anyway.png" alt="Image 1" class="img-fluid shadow-sm hover-shadow">
+                </a>
+            </div>
+            <!-- Image 2 -->
+            <div class="col-md-4">
+                <a href="https://example.com/2" target="_blank">
+                    <img src="/imgs/hey.png" alt="Image 2" class="img-fluid shadow-sm hover-shadow">
+                </a>
+            </div>
+            <!-- Image 3 -->
+            <div class="col-md-4">
+                <a href="https://example.com/3" target="_blank">
+                    <img src="/imgs/who.png" alt="Image 3" class="img-fluid shadow-sm hover-shadow">
+                </a>
             </div>
         </div>
-    
-        <!-- Project 3 -->
-        <div class="media">
-            <img src="/imgs/DALL·E 2024-03-04 01.37.10 - Imagine a thumbnail for a weather application, crafted as if Rembrandt himself painted a foggy morning. The scene is bathed in the soft, golden light .webp" class="align-self-start mr-3" alt="Project 3" style="width: 180px;">
-            <div class="media-body">
-                <h5 class="mt-0">Weather API</h5>
-                <p>Short description of Project 3. This can include technologies used, the purpose of the project, and any challenges you faced during development.</p>
-                <a href="#" class="btn btn-primary">Learn More</a>
+        <div class="row">
+            <!-- Second row of images -->
+            <!-- Image 4 -->
+            <div class="col-md-4">
+                <a href="https://example.com/4" target="_blank">
+                    <img src="/imgs/cares.png" alt="Image 4" class="img-fluid shadow-sm hover-shadow">
+                </a>
+            </div>
+            <!-- Image 5 -->
+            <div class="col-md-4">
+                <a href="https://example.com/5" target="_blank">
+                    <img src="/imgs/Pave.png" alt="Image 5" class="img-fluid shadow-sm hover-shadow">
+                </a>
+            </div>
+            <!-- Image 6 -->
+            <div class="col-md-4">
+                <a href="https://example.com/6" target="_blank">
+                    <img src="/imgs/store.png" alt="Image 6" class="img-fluid shadow-sm hover-shadow">
+                </a>
             </div>
         </div>
     </div>
-
     <br>
-    
-
-
 
     <div id="footer"></div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        $(function(){
+        $(function() {
             $("#header").load("header.html");
             $("#footer").load("footer.html");
         });
     </script>
+
 </body>
+
 </html>
