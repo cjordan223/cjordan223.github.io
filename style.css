@@ -165,6 +165,10 @@ p {
     display: inline-block;
 }
 
+.container-fluid {
+    padding: 70px; /* Change this value to whatever padding you want */
+}
+
 .image-hover .hover-text {
     position: absolute;
     bottom: 10px;

@@ -1,3 +1,6 @@
+//script.js
+
+
 let currentIndex = 0;
 const images = document.querySelectorAll('.galleryImage');
 const totalImages = images.length;
@@ -10,3 +13,6 @@ function cycleImages() {
 
 // Change image every 5 seconds
 setInterval(cycleImages, 5000);
+
+ 
+

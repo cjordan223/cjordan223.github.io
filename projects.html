@@ -1,40 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-
 <body>
 
     <div id="header"></div>
 
-    <div class="container mt-5">
+    <div class="container-fluid">
+        <br>
         <h1>Projects</h1>
-        <p>You'll find a mixed bag here, I love working with different frameworks and languages to get a feel for each.</p>
+        <p>You'll find a mixed bag here, I love working with different frameworks and languages to get a feel for each. The cards are react components, everything else is standard HTML/JS</p>
         
-        <!-- Start of Projects and Image/Dropdown section -->
-        <div class="row">
-            <!-- Left column for cards -->
-            <div class="col-md-8">
-         
-          
-            </div>
-            
+        <div id="app"></div>
+
+        <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/@babel/standalone@7.14.5/babel.min.js"></script>
+    
+        <script type="text/babel">
+            const Card = ({ title, imageUrl, text }) => (
+                <div className="card mb-4">
+                    <img src={imageUrl} className="card-img-top" alt={title} />
+                    <div className="card-body">
+                        <h5 className="card-title">{title}</h5>
+                        <p className="card-text">{text}</p>
+                    </div>
+                </div>
+            );
+    
+            class App extends React.Component {
+                render() {
+                    const giantCardData = {
+                        title: 'Weather Wise',
+                        imageUrl: 'https://images.pexels.com/photos/125510/pexels-photo-125510.jpeg',
+                        text: 'This is an application I built for a web programming class, so this is an enirely client-side application using a free weather API. Before I ever took this class, I built an identical application using Python and Django. This application was a bit more lightweight but honestly more complicated to set up.',
+                    };
+    
+                    const smallCardsData = [
+                        { title: 'Guessr', imageUrl: 'https://via.placeholder.com/150', text: 'Wordle, basically.' },
+                        { title: 'Card 2', imageUrl: 'https://via.placeholder.com/150', text: 'This is the second card.' },
+                        { title: 'Card 3', imageUrl: 'https://via.placeholder.com/150', text: 'This is the third card.' },
+                        { title: 'Card 4', imageUrl: 'https://via.placeholder.com/150', text: 'This is the fourth card.' }
+                    ];
+    
+                    return (
+                        <div className="container-fluid">
+                            <div className="row">
+                                <div className="col-md-6">
+                                    <div className="card" style={{ width: '100%', height: '100%' }}>
+                                        <img src={giantCardData.imageUrl} className="card-img-top" alt={giantCardData.title} />
+                                        <div className="card-body">
+                                            <h5 className="card-title">{giantCardData.title}</h5>
+                                            <p className="card-text">{giantCardData.text}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-md-6">
+                                    <div className="row">
+                                        {smallCardsData.map((card, index) => (
+                                            <div key={index} className="col-md-6">
+                                                <Card title={card.title} imageUrl={card.imageUrl} text={card.text} />
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    );
+                }
+            }
+    
+            ReactDOM.render(<App />, document.getElementById('app'));
+        </script>
+        
+        
             <!-- Right column for image and dropdown -->
-            <div class="col-md-4">
+
+            <br><br>
+
+            <div class="row">
+            <div class="col-md-6">
                 <img src="/imgs/khans.webp" alt="Descriptive Alt Text" class="img-fluid">
-                <h3>Data Structures / Algorithms</h3>
+            </div>
+            <div class="col-md-6">
+                <h1> DFS, BFS & Khans Algorithm</h1> <br>
+             <p>Depth-First Search (DFS) and Breadth-First Search (BFS) are fundamental graph traversal algorithms used in computer science to explore and analyze graphs. DFS systematically explores as far as possible along each branch before backtracking, making it useful for tasks such as topological sorting, detecting cycles, and finding connected components. In contrast, BFS explores neighbors of a node before moving on to its children, making it suitable for shortest path problems and level-order traversal. Khan's Algorithm, on the other hand, is primarily employed for topological sorting of directed acyclic graphs (DAGs). It works by iteratively removing nodes with zero in-degree, gradually revealing a linear ordering of the vertices. These algorithms represent essential tools for solving a variety of graph-related problems efficiently.</p>
+            <h3>Data Structures / Algorithms</h3>
                 <select class="form-control mt-3">
                     <option>Option 1</option>
                     <option>Option 2</option>
                     <option>Option 3</option>
-                </select>
-            </div>
+                </select></div>
+        </div>
         </div>
         <!-- End of Projects and Image/Dropdown section -->
 
@@ -95,6 +151,8 @@
     <br>
 
     <div id="footer"></div>
+    
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
