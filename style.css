@@ -12,8 +12,8 @@ h1 {
 
 footer {
     padding-top: 20px; /* Adjust top padding */
-    padding-bottom: 20px; /* Adjust bottom padding */
-}
+    padding-bottom: 20px; 
+ }
 
 html, body {
     height: 100%;
