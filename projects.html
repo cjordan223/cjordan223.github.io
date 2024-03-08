@@ -2,14 +2,14 @@
 <html lang="en">
 
 <body>
-
+<link rel="stylesheet" href="projects.css">
     <div id="header"></div>
 
     <div class="container-fluid">
         <br>
         <h1>Projects</h1>
         <p>You'll find a mixed bag here, I love working with different frameworks and languages to get a feel for each. The cards are react components, everything else is standard HTML/JS</p>
-        
+             
         <div id="app"></div>
 
         <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
@@ -17,145 +17,232 @@
         <script src="https://unpkg.com/@babel/standalone@7.14.5/babel.min.js"></script>
     
         <script type="text/babel">
-            const Card = ({ title, imageUrl, text }) => (
-                <div className="card mb-4">
-                    <img src={imageUrl} className="card-img-top" alt={title} />
-                    <div className="card-body">
-                        <h5 className="card-title">{title}</h5>
-                        <p className="card-text">{text}</p>
-                    </div>
-                </div>
-            );
-    
-            class App extends React.Component {
-                render() {
-                    const giantCardData = {
-                        title: 'Weather Wise',
-                        imageUrl: 'https://images.pexels.com/photos/125510/pexels-photo-125510.jpeg',
-                        text: 'This is an application I built for a web programming class, so this is an enirely client-side application using a free weather API. Before I ever took this class, I built an identical application using Python and Django. This application was a bit more lightweight but honestly more complicated to set up.',
-                    };
-    
-                    const smallCardsData = [
-                        { title: 'Guessr', imageUrl: 'https://images.pexels.com/photos/1591061/pexels-photo-1591061.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', text: 'Wordle, basically.' },
-                        { title: 'Markov Text Generator', imageUrl: 'https://images.pexels.com/photos/261763/pexels-photo-261763.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', text: 'Chat Bot Impersonater.' },
-                        { title: 'Card 3', imageUrl: 'https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&w=600', text: 'This is the third card.' },
-                        { title: 'Card 4', imageUrl: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=600', text: 'This is the fourth card.' }
-                    ];
-    
-                    return (
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col-md-6">
-                                    <div className="card" style={{ width: '100%', height: '100%' }}>
-                                        <img src={giantCardData.imageUrl} className="card-img-top" alt={giantCardData.title} />
-                                        <div className="card-body">
-                                            <h5 className="card-title">{giantCardData.title}</h5>
-                                            <p className="card-text">{giantCardData.text}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div className="row">
-                                        {smallCardsData.map((card, index) => (
-                                            <div key={index} className="col-md-6">
-                                                <Card title={card.title} imageUrl={card.imageUrl} text={card.text} />
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    );
-                }
-            }
-    
-            ReactDOM.render(<App />, document.getElementById('app'));
-        </script>
-        
-        
-            <!-- Right column for image and dropdown -->
 
-            <br><br>
 
-            <div class="row">
-            <div class="col-md-6">
-                <img src="/imgs/khans.webp" alt="Descriptive Alt Text" class="img-fluid">
-            </div>
-            <div class="col-md-6">
-                <h1> DFS, BFS & Khans Algorithm</h1> <br>
-             <p>Depth-First Search (DFS) and Breadth-First Search (BFS) are fundamental graph traversal algorithms used in computer science to explore and analyze graphs. DFS systematically explores as far as possible along each branch before backtracking, making it useful for tasks such as topological sorting, detecting cycles, and finding connected components. In contrast, BFS explores neighbors of a node before moving on to its children, making it suitable for shortest path problems and level-order traversal. Khan's Algorithm, on the other hand, is primarily employed for topological sorting of directed acyclic graphs (DAGs). It works by iteratively removing nodes with zero in-degree, gradually revealing a linear ordering of the vertices. These algorithms represent essential tools for solving a variety of graph-related problems efficiently.</p>
-            <h3>Data Structures / Algorithms</h3>
-                <select class="form-control mt-3">
-                    <option>Kahns Algorithm</option>
-                    <option>Depth First Search</option>
-                    <option>Breadth First Search</option>
-                    <option>Traveling Salesman Problem</option>
-                    <option>Minimum Spanning Tree</option>
-                    <option>Topological Sorting of a DAG</option>
-                    <option>Dyanamic programming</option>
-                    <option>Directed Acyclic Graph (DAG)</option>
-                </select>
-            
-        </div>
-        </div>
-        </div>
-        <!-- End of Projects and Image/Dropdown section -->
+ const Card = ({ title, imageUrl, text, url }) => (
+            <a href={url} target="_blank" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <div className="card mb-4">
+              <img src={imageUrl} className="card-img-top" alt={title} />
+                 <div className="card-body">
+                   <h5 className="card-title">{title}</h5>
+                     <p className="card-text">{text}</p>
+                 </div>
+             </div>
+            </a>
+                                );
 
-        <h1 class="mt-5">Completed Web Sites</h1>
-        <p>Most of this work was done in 2022-2023, when I was working as a freelancer for Simple.biz.</p>
-        <h4>Tools used:</h4>
-        <ul>
-            <li>Duda CMS</li>
-            <li>Canva Pro</li>
-            <li>Photoshop</li>
-            <li>Cognito Forms</li>
-        </ul>
-
-        <h4>Click an Image to Visit the Site</h4>
-        <div class="row mb-4">
-            <!-- First row of images -->
-            <!-- Image 1 -->
-            <div class="col-md-4">
-                <a href="https://example.com/1" target="_blank">
-                    <img src="/imgs/anyway.png" alt="Image 1" class="img-fluid shadow-sm hover-shadow">
-                </a>
-            </div>
-            <!-- Image 2 -->
-            <div class="col-md-4">
-                <a href="https://example.com/2" target="_blank">
-                    <img src="/imgs/hey.png" alt="Image 2" class="img-fluid shadow-sm hover-shadow">
-                </a>
-            </div>
-            <!-- Image 3 -->
-            <div class="col-md-4">
-                <a href="https://example.com/3" target="_blank">
-                    <img src="/imgs/who.png" alt="Image 3" class="img-fluid shadow-sm hover-shadow">
-                </a>
-            </div>
-        </div>
-        <div class="row">
-            <!-- Second row of images -->
-            <!-- Image 4 -->
-            <div class="col-md-4">
-                <a href="https://example.com/4" target="_blank">
-                    <img src="/imgs/cares.png" alt="Image 4" class="img-fluid shadow-sm hover-shadow">
-                </a>
-            </div>
-            <!-- Image 5 -->
-            <div class="col-md-4">
-                <a href="https://example.com/5" target="_blank">
-                    <img src="/imgs/Pave.png" alt="Image 5" class="img-fluid shadow-sm hover-shadow">
-                </a>
-            </div>
-            <!-- Image 6 -->
-            <div class="col-md-4">
-                <a href="https://example.com/6" target="_blank">
-                    <img src="/imgs/store.png" alt="Image 6" class="img-fluid shadow-sm hover-shadow">
-                </a>
-            </div>
+const FullWidthCard = ({ title, imageUrl, text, url }) => (
+  <a href={url} target="_blank" style={{ textDecoration: 'none', color: 'inherit' }}>
+    <div className="full-width-card">
+        <img src={imageUrl} className="full-width-card-img-top" alt={title} />
+        <div className="full-width-card-body">
+            <h2 className="full-width-card-title">{title}</h2>
+            <p className="full-width-card-text">{text}</p>
         </div>
     </div>
-    <br>
+  </a>
+);
+
+
+
+
+
+    
+class App extends React.Component {
+    render() {
+        const fullWidthCardData = {
+            title: 'Data Structures & Algorithms',
+            imageUrl: 'imgs/Screenshot 2024-03-08 at 1.11.29 AM.png', // Example image URL
+            text: 'A repo to some straightforward Java programs outlines some very well known DSA concepts. Theres a brief description of each process in the header of each file. These solutions are basic illustrations of some common problem solving approaches within the field.',
+            url: 'https://github.com/cjordan223/DSA-collection.git'
+        };
+
+        const giantCardData = {
+            title: 'Weather Wise',
+            imageUrl: 'https://images.pexels.com/photos/125510/pexels-photo-125510.jpeg',
+            text: 'This is an application I built for a web programming class, so this is an entirely client-side application using a free weather API. Before I ever took this class, I built an identical application using Python and Django. This application was a bit more lightweight but honestly more complicated to set up.',
+            url: 'https://github.com/cjordan223/weather-wise.git'
+        };
+
+        const smallCardsData = [
+            { 
+                title: 'Guessr', 
+                imageUrl: 'https://images.pexels.com/photos/1591061/pexels-photo-1591061.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 
+                text: 'Not a repo. Simple web app. Its Wordle, basically.', 
+                url: 'https://connerjordan.com/Guessr/' 
+            },
+            { 
+                title: 'Markov Text Generator', 
+                imageUrl: 'https://images.pexels.com/photos/261763/pexels-photo-261763.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 
+                text: 'Chat Bot Impersonator.', 
+                url: 'https://github.com/cjordan223/Markov.git' 
+            },
+            { 
+                title: 'Movie App (Group)', 
+                imageUrl: '/imgs/peak.png', 
+                text: 'Full stack movie application.', 
+                url: 'media/CST 336 FINAL REPORT.pdf' 
+            },
+            { 
+                title: 'UserVault', 
+                imageUrl: '/imgs/vault.png', 
+                text: 'Simple user database web app.', 
+                url: 'https://github.com/cjordan223/UserVault.git' 
+            }
+        ];
+
+        return (
+            <div className="container-fluid">
+                
+                <div className="row">
+                    <div className="col-md-6">
+                        <div className="card" style={{ width: '100%', height: '100%' }}>
+                            <a href={giantCardData.url}>
+                                <img src={giantCardData.imageUrl} className="card-img-top" alt={giantCardData.title} />
+                            </a>
+                            <div className="card-body">
+                                <h5 className="card-title">{giantCardData.title}</h5>
+                                <p className="card-text">{giantCardData.text}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-6">
+                        <div className="row">
+                            {smallCardsData.map((card, index) => (
+                                <div key={index} className="col-md-6">
+                                    <Card 
+                                        title={card.title} 
+                                        imageUrl={card.imageUrl} 
+                                        text={card.text}
+                                        url={card.url}
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-12"> {/* Use full width of the row */}
+                        <FullWidthCard 
+                            title={fullWidthCardData.title} 
+                            imageUrl={fullWidthCardData.imageUrl} 
+                            text={fullWidthCardData.text}
+                            url={fullWidthCardData.url}
+                        />
+                    </div>
+                </div>
+            </div>
+        );
+    }
+}
+
+ReactDOM.render(<App />, document.getElementById('app'));
+
+        </script>
+   
+ 
+        <div class="container mt-5">
+            <div class="text-center mb-4">
+              <h1>Completed Web Sites</h1>
+              <p>Most of this work was done in 2022-2023, when I was working as a freelancer for Simple.biz.</p>
+            </div>
+          
+            <div class="mb-3">
+              <h4>Tools used:</h4>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Duda CMS</li>
+                <li class="list-group-item">Canva Pro</li>
+                <li class="list-group-item">Photoshop</li>
+                <li class="list-group-item">Cognito Forms</li>
+              </ul>
+            </div>
+          
+            <h4 class="mb-3 text-center">Click to View</h4>
+          
+            <div class="container">
+                <!-- First row of images -->
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+                  <!-- Image 1 -->
+                  <div class="col">
+                    <div class="card h-100 shadow-sm hover-shadow">
+                      <a href="https://example.com/1" target="_blank">
+                        <img src="/imgs/Pave.png" alt="Image 1" class="card-img-top">
+                      </a>
+                      <div class="card-body">
+                        <p class="card-text">Sprague Pavers</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Image 2 -->
+                  <div class="col">
+                    <div class="card h-100 shadow-sm hover-shadow">
+                      <a href="https://example.com/2" target="_blank">
+                        <img src="/imgs/cares.png" alt="Image 2" class="card-img-top">
+                      </a>
+                      <div class="card-body">
+                        <p class="card-text">Lane's LLC</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Image 3 -->
+                  <div class="col">
+                    <div class="card h-100 shadow-sm hover-shadow">
+                      <a href="https://example.com/3" target="_blank">
+                        <img src="/imgs/anyway.png" alt="Image 3" class="card-img-top">
+                      </a>
+                      <div class="card-body">
+                        <p class="card-text">C-Plastic Design</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Spacing between rows -->
+                <div class="w-100 my-4"></div> <!-- Adjust 'my-4' to increase/decrease spacing -->
+              
+                <!-- Second row of images -->
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                  <!-- Image 4 -->
+                  <div class="col">
+                    <div class="card h-100 shadow-sm hover-shadow">
+                      <a href="https://example.com/4" target="_blank">
+                        <img src="/imgs/store.png" alt="Image 4" class="card-img-top">
+                      </a>
+                      <div class="card-body">
+                        <p class="card-text">Amendola Storage</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Image 5 -->
+                  <div class="col">
+                    <div class="card h-100 shadow-sm hover-shadow">
+                      <a href="https://example.com/5" target="_blank">
+                        <img src="/imgs/hey.png" alt="Image 5" class="card-img-top">
+                      </a>
+                      <div class="card-body">
+                        <p class="card-text">Lone Oak Baptist</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Image 6 -->
+                  <div class="col">
+                    <div class="card h-100 shadow-sm hover-shadow">
+                      <a href="https://example.com/6" target="_blank">
+                        <img src="/imgs/who.png" alt="Image 6" class="card-img-top">
+                      </a>
+                      <div class="card-body">
+                        <p class="card-text">Carpentry Solutions</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+ </div>
+
+
+ <br><br>
+
 
     <div id="footer"></div>
     
